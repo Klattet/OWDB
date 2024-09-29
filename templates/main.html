@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OWDB: An Overwatch database!</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Placeholder description.">
+
+        <link href="{{ url_for('static', filename='images/OW_logo.ico') }}" rel="icon">
+        <link href="{{ url_for('static', filename='css/inherit.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <section class="side_buttons">
+                <a href="/heroes" class="heroes_button">
+                    <span style="display: block;">
+                        <img src="{{ url_for('static', filename='images/tracer_concept.png') }}">
+                        Heroes
+                    </span>
+                </a>
+                <a class="maps_button">
+                    <span style="display: block;">
+                        <img src="{{ url_for('static', filename='images/kings_row.png') }}">
+                        Maps
+                    </span>
+                </a>
+                <a class="skins_button">
+                    <span style="display: block;">
+                        <img src="{{ url_for('static', filename='images/mythic_genji.png') }}">
+                        Skins
+                    </span>
+                </a>
+            </section>
+        </div>
+        <div class="canvas_top">
+            <a class="logo" href="/">
+                <span style="display: block;">
+                    <img src="{{ url_for('static', filename='images/OWDB_full.png') }}">
+                </span>
+            </a>
+            <section class="search_section">
+                <form class="search_form" action="/search">
+                    <button id="search_button" type="submit"></button>
+                    <input type="text" id="search_text" placeholder="Search..." name="query">
+                </form>
+            </section>
+        </div>
+        <div class="canvas">
+
+        </div>
+    </body>
+
+</html>
